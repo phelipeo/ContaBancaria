@@ -18,12 +18,12 @@ public class TelaInicioConta {
 
         while (interfaceRodando){
 
-            System.out.println("Digite o número da operação que deseja fazer.");
             System.out.println("1. Ver saldo atualizado.");
             System.out.println("2. Fazer Transferência.");
             System.out.println("3. Adicionar Saldo.");
             System.out.println("4. Sair.");
             System.out.println();
+            System.out.printf("Digite o número da operação que deseja fazer: ");
 
             opcao = scanner.nextInt();
 
@@ -35,7 +35,7 @@ public class TelaInicioConta {
                     break;
                 case 2:
 
-                    System.out.println("Digite o valor que deseja transferir ou digite 0 para cancelar: ");
+                    System.out.printf("Digite o valor que deseja transferir ou digite 0 para cancelar: ");
                     transferencia = scanner.nextDouble();
 
                     if (transferencia<dinheiroConta && transferencia!=0){
@@ -57,7 +57,7 @@ public class TelaInicioConta {
 
                 case 3:
                     System.out.println();
-                    System.out.println("Digite o saldo que deseja adicionar ou digite 0 para cancelar:");
+                    System.out.printf("Digite o saldo que deseja adicionar ou digite 0 para cancelar: ");
                     transferencia = scanner.nextDouble();
                     if (transferencia<0) {
                         System.out.println();
@@ -77,7 +77,17 @@ public class TelaInicioConta {
                     break;
 
                 case 4:
+                    System.out.println();
+                    System.out.println("Obrigado por usar nosso aplicativo! Até mais!");
+                    System.out.println();
                     interfaceRodando = false;
+                    break;
+
+                default:
+                    System.out.println();
+                    System.out.println("Digite um número de 1 a 4 correspondentes à opção desejada!");
+                    System.out.println();
+                    break;
 
             }
             }
